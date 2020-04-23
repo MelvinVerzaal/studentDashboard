@@ -1,13 +1,125 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/*basic*/
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .Cross{
+      color:red;
+      float: right;
+      margin:5px;
+      line-height: 1rem;
+      cursor: pointer;
+      }
+/*header*/
+    .AppHeader{
+      background: #4a90e2;
+      height: 50px;
+      width: 100%;
+    }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/*Menu*/
+    .AppMenu{
+      top:100px;
+      padding:1% 5% 1% 5%;
+      background-color: #ecba1d;
+      border-radius: 0px 0px 50px 50px;
+      display: none;
+      transition:  5s;
+    }
+    .AppMenu>*{
+      display: inline-block;
+    }
+/*MainChart*/
+    .MainChart{
+      height: 500px;
+      width: 70%;
+      min-width: 500px;
+      margin: 10% 10% 0% 10%;
+      overflow-x: scroll;
+      box-shadow: 0em 0em 0.5em 0em #ccc;
+      border-radius: 5px; 
+      padding: 5%;
+    }
+    /*Basic Chart settings*/
+   .MainChart >*{
+      display: inline-block;
+      height: 85%;
+    }
+    .MainChart >*>*{
+      height: 17%;
+    }
+
+    /*legenda */
+      /*x */
+      .MainChart>*>*:nth-child(3) {
+        margin: 0px 5px 0px 5px;
+        }
+      /*Y */
+      .ChartY {
+            width: 20px;
+            height: 100%;
+            border:none;
+      }
+  
+
+     /*Chart*/
+        .difficultyChart, .likeabilityChart{
+        display: inline-block;
+        height: 100%;
+        margin: 0px 1px 0px 1px;
+      }
+
+     /*cell in Chart*/
+      .difficultyChart >*, .likeabilityChart>*{
+        width: 20px;
+        height: 20%;
+   
+        
+        }
+
+        .difficultyChart{background-color: #4a90e2;}
+        .likeabilityChart{background-color: #9a4;}
+
+
+
+
+
+/*PersonalChart*/
+    .PersonalChartContiner{
+    position: absolute;
+    display: none;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #00000050;
+    }
+    .PersonalChart{
+      height: 79%;
+      width: 79%;
+      margin: 10% 10% 0% 10%;
+      padding: 0.5%;
+      background-color: #fff;
+      box-shadow: 0em 0em 0.5em 0em #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+/*scrollbar*/
+    ::-webkit-scrollbar {
+      width: 0.5%;
+    }
+    ::-webkit-scrollbar-track {
+      background: #efefef00;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4a90e2; 
+      min-width: 5px;
+      min-height: 5px;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ecba1d; 
+    }
