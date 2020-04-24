@@ -8,8 +8,9 @@ class MainChart extends Component {
 render() {
   return (
     <div className="MainChart" >
+       
       <div className='MainChartframe' >
-           <div className='ChartY' >
+            <div className='ChartY' >
               <div>5</div>
               <div>4</div>
               <div style={{height: 17 +'%', margin: 0}}>3</div>
@@ -19,10 +20,8 @@ render() {
               <div >&nbsp;</div>
            </div>
 
-
-          {
-
-            this.props.data.students.map((data) => {
+          { 
+              this.props.data.students.map((data) => {
               if(assignments.includes(data.assignment)){}else{
                         
                  //push assignment for cheacking if in array so we display them one time only
@@ -64,13 +63,13 @@ render() {
                          if(averageLikeability > 3){averageLikeability = averageLikeability*1.05}
                        let averageLikeabilityHeight = averageLikeability*19 +'%'
 
-                 return (
+                return (
                      <div>
                        <div className='difficultyChart' title={originalAverageDifficulty} style={{height:averageDifficultyHeight}}></div>
                        <div className='likeabilityChart' title={originalAverageLikeability} style={{height:averageLikeabilityHeight}}> </div>
                        <div>{data.assignment}</div>
                      </div>
-                   )
+                )
               }
             })
           }

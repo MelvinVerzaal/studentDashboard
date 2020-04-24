@@ -16,7 +16,7 @@ function AppHeader() {
       alt="new"
       />
 
-    <h1 style={{color: '#FFFFFF', margin: 0, display: 'inline-block'}}>  Student Dashboards</h1></div>
+    <h1 style={{color: '#5c9de8', margin: 0, display: 'inline-block'}}>  Student Dashboards</h1></div>
 
 
 

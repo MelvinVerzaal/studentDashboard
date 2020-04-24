@@ -25,6 +25,7 @@ function PersonalChart() {
 <tr><td>Github:</td>    <td colspan='2' id='github'></td></tr>
 
 </table>
+
 <div className="PersonalChart">
 <div className='PersonalChartframe' >
            <div className='ChartY' >
@@ -36,10 +37,7 @@ function PersonalChart() {
               <div style={{height: 100}}>&nbsp;</div>
               <div >&nbsp;</div>
            </div>
-
-
 </div>
-
 </div>
 
 
