@@ -13,12 +13,21 @@
       margin:5px;
       line-height: 1rem;
       cursor: pointer;
+
+      position: relative;
+      left:17%;
+      
       }
       input[type=checkbox]{
     width: 18px;
     height: 18px;
         cursor: pointer;
         }
+
+    #root{
+      margin: 0;
+      overflow: hidden;
+    }
 /*header*/
     .AppHeader{
       background: #4a90e2;
@@ -32,8 +41,8 @@
       padding:1% 10% 1% 10%;
       background-color: #ecba1d;
       border-radius: 0px 0px 55px 55px;
-      display: none;
-      transition:  5s;
+      visibility: hidden;
+
     }
     .AppMenu>*{
       display: inline-block;
@@ -43,7 +52,7 @@
       height: 400px;
       width: 70%;
       min-width: 500px;
-      margin: 5% 10% 0% 10%;
+      margin: 1% 10% 0% 10%;
       overflow-x: scroll;
       overflow-y: hidden;
       box-shadow: 0em 0em 0.5em 0em #ccc;
@@ -53,9 +62,10 @@
     /*Basic Chart settings*/
 
  
-   .MainChart >*>*{
+   .MainChart >*>*, .PersonalChart>*>*{
       display: inline-block;
       height: 85%;
+      animation: windowLoad 1s;
     }
     .MainChart >*>*>*{
       height: 17%;
@@ -65,13 +75,21 @@
       /*x */
       .MainChart>*>*>*:nth-child(3) {
         margin: 0px 5px 0px 5px;
-        }
+        word-break: break-all;
+        width: 60px;
+        height:  100px;
+        overflow: hidden;
+        
+      }
       /*Y */
       .ChartY {
             width: 20px;
-            height: 100%;
-            border:none;
+            height: 386px;
+            animation:none;
+
       }
+
+
   
 
      /*Chart*/
@@ -81,20 +99,37 @@
         margin: 0px 1px 0px 1px;
         font-size: 10px;
       }
-
+     
 
 
         .difficultyChart{background-color: #4a90e2;}
         .likeabilityChart{background-color: #9a4;}
 
-
+        .difficultyChart:hover, .likeabilityChart:hover{
+          filter: brightness(120%);
+        }
 
         .MainChartframe{
           height: 100%;
-          width: 1800px;
-        }
+          width: 8000px;
+          }
     
 /*PersonalChart*/
+
+ .PersonalChart{
+ height: 200px;
+ width: 90%;
+ overflow-x: scroll;
+ overflow-y: hidden;
+ box-shadow: 0em 0em 0.5em 0em #ccc;
+ border-radius: 5px;
+ padding: 5%;
+        }
+
+ .PersonalChart>*>*>*{
+  height: 10%;
+  }
+
     .PersonalChartContiner{
     position: absolute;
     display: none;
@@ -103,16 +138,20 @@
     width: 100%;
     background-color: #00000050;
     }
-    .PersonalChart{
-      height: 79%;
-      width: 79%;
+    .Personal{
+      height: 69%;
+      width: 59%;
       margin: 10% 10% 0% 10%;
-      padding: 0.5%;
+      padding: 0.5% 10% 0.5% 10%;
       background-color: #fff;
       box-shadow: 0em 0em 0.5em 0em #ccc;
       border-radius: 5px;
-      text-align: center;
-    }
+      }
+      .PersonalChartframe{
+        width: 100%;
+        height: 50% ;
+  
+      }
 /*scrollbar*/
     ::-webkit-scrollbar {
       width: 0.5%;
@@ -128,4 +167,10 @@
     }
     ::-webkit-scrollbar-thumb:hover {
       background: #ecba1d; 
+    }
+
+
+    @keyframes windowLoad {
+      from {height: 0%;}
+      to {height: 85%;}
     }
